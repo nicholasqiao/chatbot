@@ -66,7 +66,6 @@ def modifyQuestion(cursor, conn):
 	if question_id <= maxID:
 		question_text = raw_input ("New Question: ")
 
-		#Find max iteration
 		query = "SELECT MAX(iterID) FROM changes WHERE questionID = ?"		
 		res = cursor.execute(query, (question_id,))
 		reslist = res.fetchall()
