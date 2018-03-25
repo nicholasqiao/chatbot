@@ -1,0 +1,24 @@
+CREATE TABLE user_responses (
+	questionID integer, 
+	iterID integer, 
+	userID integer, 
+	response_text varchar(20)
+);
+
+CREATE TABLE questions (
+    questionID INTEGER PRIMARY KEY AUTOINCREMENT,
+    topicID INTEGER,
+    iterID INTEGER
+);
+
+CREATE TABLE users (
+    userID INTEGER PRIMARY KEY AUTOINCREMENT,
+    firstName varchar(20),
+    lastName varchar(20)
+);
+
+CREATE TABLE changes (
+	questionID integer, 
+	iterID integer, 
+	text varchar(20)
+);
